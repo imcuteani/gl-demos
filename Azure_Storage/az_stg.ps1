@@ -1,5 +1,8 @@
 # PS script to deploy Azure storage account 
 Connect-AzAccount
+
+# Set current subscription
+Set-AzContext -Subscription "Visual Studio Enterprise with MSDN"
 # Create Resource Group 
 $ResourceGroup = 'MyResourceGroup'
 New-AzResourceGroup -Name $ResourceGroup -Location $Location
