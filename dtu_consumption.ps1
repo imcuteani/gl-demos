@@ -3,13 +3,13 @@
 
 $startDate = (Get-Date).AddDays(-7)
 $endDate = Get-Date
-$dtuMetric = Get-AzMetric -ResourceId "/subscriptions/07ee4d7d-00ae-4ebd-b4fd-ff11533f5667/resourceGroups/GL-azure-demo/providers/Microsoft.Sql/servers/glazsqlserv/databases/gl-az-db-demo" -MetricName "dtu_consumption_percent" -StartTime $startDate -EndTime $endDate -TimeGrain 00:05:00 -AggregationType "Maximum"
+$dtuMetric = Get-AzMetric -ResourceId "/subscriptions/<subcription_id>/resourceGroups/GL-azure-demo/providers/Microsoft.Sql/servers/glazsqlserv/databases/<db_name>" -MetricName "dtu_consumption_percent" -StartTime $startDate -EndTime $endDate -TimeGrain 00:05:00 -AggregationType "Maximum"
 Write-Host $dtuMetric.Data
 
-$subscriptionId = "07ee4d7d-00ae-4ebd-b4fd-ff11533f5667"
-$rg = "GL-azure-demo"
-$azsqlserver = "glazsql"
-$azsqldb = "glazsqldemo"
+$subscriptionId = "<subscription_name>"
+$rg = "<rg_name>"
+$azsqlserver = "<az_sql_srver_name>"
+$azsqldb = "<az_sql_db_name>"
 $timeGrain = "12:00:00"
 
 $MonitorSQLParameters = @{
