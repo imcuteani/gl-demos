@@ -24,6 +24,6 @@ $MonitorSQLParameters = @{
   $metric.Data 
 
 
-  /subscriptions/07ee4d7d-00ae-4ebd-b4fd-ff11533f5667/resourceGroups/GL-azure-demo/providers/Microsoft.Sql/servers/glazsql/databases/glazsqldemo
+  /subscriptions/<your_az_subs_id>/resourceGroups/GL-azure-demo/providers/Microsoft.Sql/servers/glazsql/databases/glazsqldemo
  
     
